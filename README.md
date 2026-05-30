@@ -93,7 +93,7 @@ docker/
 Getting Started
 
 1. Clone the repository
-   git clone [https://github.com/ayma15/smart-quran.git](https://github.com/ayma15/smart-quran.git)
+   git clone (https://github.com/Smart-Quran/smart-quran)
    cd smart-quran
 
 2. Backend setup
