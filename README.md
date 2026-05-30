@@ -1,5 +1,3 @@
-smart-quran
-AI-powered Quran exploration platform with search, audio recitation, tafseer, and Telegram Mini App support.
 Smart Quran – AI-Powered Quran Exploration Platform
 
 Smart Quran is a modern Quran exploration system designed as a Telegram Mini App and web platform. It provides fast Quran search, audio recitation, tafseer (explanation), and structured Quran browsing in a clean and responsive interface.
@@ -51,7 +49,7 @@ Telegram Mini App Support
 
 Tech Stack
 
-Frontend:
+Frontend
 
 * Next.js
 * TypeScript
@@ -59,13 +57,13 @@ Frontend:
 * Framer Motion
 * Telegram Mini App SDK
 
-Backend:
+Backend
 
 * FastAPI (Python)
 * PostgreSQL
 * SQLAlchemy
 
-Data:
+Data
 
 * Quran text dataset (Arabic, English, transliteration)
 * Tafseer datasets
@@ -92,21 +90,21 @@ docker/
 
 Getting Started
 
-1. Clone the repository
-   git clone (https://github.com/Smart-Quran/smart-quran)
-   cd smart-quran
+Clone the repository
+git clone [https://github.com/Smart-Quran/smart-quran.git](https://github.com/Smart-Quran/smart-quran.git)
+cd smart-quran
 
-2. Backend setup
-   cd backend
-   python -m venv venv
-   activate virtual environment
-   install requirements
-   Run FastAPI server with uvicorn
+Backend setup
+cd backend
+python -m venv venv
+activate virtual environment
+install requirements
+run FastAPI server with uvicorn
 
-3. Frontend setup
-   cd frontend
-   npm install
-   npm run dev
+Frontend setup
+cd frontend
+npm install
+npm run dev
 
 Environment Variables
 
@@ -118,11 +116,11 @@ Telegram Mini App
 
 This project runs inside Telegram using the Mini App system.
 
-Steps:
+Steps
 
-1. Create a bot using BotFather
-2. Set Mini App URL
-3. Connect frontend using Telegram WebApp SDK
+* Create a bot using BotFather
+* Set Mini App URL
+* Connect frontend using Telegram WebApp SDK
 
 Future Features (Not included in MVP)
 
@@ -135,9 +133,9 @@ Future Features (Not included in MVP)
 
 Important Notes
 
-* This project is for educational and spiritual learning purposes
-* No AI-generated religious rulings (fatwas)
-* All AI responses must cite Quran and Tafseer sources when added
+This project is for educational and spiritual learning purposes.
+No AI-generated religious rulings (fatwas).
+All AI responses must cite Quran and Tafseer sources when added.
 
 License
 
@@ -145,4 +143,4 @@ MIT License
 
 Purpose
 
-To build a fast, clean, and intelligent Quran exploration experience that works seamlessly on Telegram and the web
+To build a fast, clean, and intelligent Quran exploration experience that works seamlessly on Telegram and the web.
