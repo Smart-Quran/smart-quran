@@ -1,0 +1,36 @@
+version: '3.9'
+
+# Local development override — HTTP only, no SSL, hot-reload friendly
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  db:
+    ports:
+      - "5432:5432"   # expose Postgres locally for dev tools
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      ENVIRONMENT: development
+      ALLOWED_ORIGINS: http://localhost:3000
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./backend:/app   # mount source for hot-reload
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    command: npm run dev
+    volumes:
+      - ./frontend/src:/app/src   # mount src for hot-reload
+    ports:
+      - "3000:3000"
+
+  nginx:
+    # Skip nginx in dev — access services directly on their ports
+    profiles: ["prod"]
